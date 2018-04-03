@@ -34,5 +34,6 @@ def rank(sentence, model):
         w, w_ = sentence[i], sentence[i+1]
         w, w_ = w.lower(), w_.lower()
         c += model[(w, w_)]
+        if c == 0: c += 1
         l.append(c)
     return rms(l)
