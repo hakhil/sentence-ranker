@@ -64,6 +64,7 @@ if __name__ == "__main__":
 
     # Start editor and canvas windows
     root = Tk()
+    root.title("Sentence ranking")
     ep = EditPanel(root)
     ep.pack(fill="both", expand=True)
 

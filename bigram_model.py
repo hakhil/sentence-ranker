@@ -21,7 +21,11 @@ def load_model(f):
     return pickle.load(open(f, "rb"))
 
 def rms(l):
-    s = sum([(1.0/x) for x in l])
+    s = 0
+    for x in l:
+        if x != 1:
+            s += (1.0 / x)
+    #s = sum([(1.0/x) for x in l])
     return (s/len(l)) ** 0.5
 
 def rank(sentence, model):
